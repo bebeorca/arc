@@ -3,8 +3,7 @@
     "builds": [
       {
         "src": "public/**",
-        "use": "@vercel/static-build",
-        "config": { "zeroConfig": true }
+        "use": "@vercel/static-build"
       },
       {
         "src": "artisan",
@@ -14,7 +13,7 @@
     "routes": [
       { "handle": "filesystem" },
       {
-        "src": "/(?:.*)",
+        "src": "/(.*)",
         "dest": "/index.php"
       }
     ]
